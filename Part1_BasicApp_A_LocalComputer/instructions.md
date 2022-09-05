@@ -19,16 +19,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello Sammy!'
+    return 'Hello world!'
+
+if __name__ == '__main__':
+    app.run(debug=True, host='localhost', port=80)
 ```
 
 ### Step 6
-- Local run: 
-`export FLASK_APP=app.py` 
-`sudo -E bash -c 'echo $FLASK_APP'` 
 - Local run command with default: 
-`flask run` 
-- Local run command wiht arguments:  
-`flask run -h localhost -p 3000` 
-`sudo flask run -h localhost -p 80`
-
+`python app.py` 
